@@ -1782,12 +1782,25 @@ class TranslatorWindow(QWidget):
         """)
         
     def show_translation(self, text, translation):
-        """顯示翻譯結果"""
+        """顯示翻譯結果 - 安全版本避免視窗錯誤"""
         print(f"[DEBUG] *** SHOW_TRANSLATION CALLED *** Text: {text[:30] if text else 'None'}... Translation: {translation[:50] if translation else 'None'}...")
         
         try:
+            # 自動複製翻譯結果到剪貼簿
+            try:
+                import pyperclip
+                pyperclip.copy(translation)
+                print(f"[SUCCESS] Translation copied to clipboard: {translation[:50]}...")
+            except Exception as clipboard_error:
+                print(f"[WARNING] Failed to copy to clipboard: {clipboard_error}")
+            
+            # 檢查是否已經有有效的視窗
+            if not self.isValid():
+                print("[WARNING] Window handle is invalid, recreating...")
+                self.initUI()
+            
             # 設置翻譯結果 - 簡化版本
-            display_text = f"原文: {text}\n\n翻譯: {translation}"
+            display_text = f"原文: {text}\n\n翻譯: {translation}\n\n✅ 已複製到剪貼簿"
             self.result_label.setText(display_text)
             
             # 簡單樣式
@@ -1802,22 +1815,56 @@ class TranslatorWindow(QWidget):
                 }
             """)
             
-            # 強制顯示窗口
-            self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
-            self.adjustSize()
-            self.show()
-            self.raise_()
-            self.activateWindow()
-            
-            print(f"[SUCCESS] *** TRANSLATION WINDOW SHOULD BE VISIBLE NOW ***")
-            
-            # 設置自動隱藏定時器（15秒）
-            self.auto_hide_timer.start(15000)
+            # 安全的視窗顯示方式
+            try:
+                # 設置基本視窗屬性
+                self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint | Qt.Tool)
+                self.setAttribute(Qt.WA_ShowWithoutActivating, True)
+                
+                # 調整大小並顯示
+                self.adjustSize()
+                self.show()
+                
+                # 嘗試提升視窗層級
+                try:
+                    self.raise_()
+                    self.activateWindow()
+                except Exception as raise_error:
+                    print(f"[WARNING] Failed to raise window: {raise_error}")
+                
+                print(f"[SUCCESS] *** TRANSLATION WINDOW SHOULD BE VISIBLE NOW ***")
+                
+                # 設置自動隱藏定時器（15秒）
+                if hasattr(self, 'auto_hide_timer'):
+                    self.auto_hide_timer.start(15000)
+                else:
+                    # 創建定時器如果不存在
+                    self.auto_hide_timer = QTimer()
+                    self.auto_hide_timer.timeout.connect(self.fade_out)
+                    self.auto_hide_timer.start(15000)
+                
+            except Exception as window_error:
+                print(f"[ERROR] Window display error: {window_error}")
+                # 降級到簡單顯示
+                try:
+                    self.setWindowFlags(Qt.Window)
+                    self.show()
+                    print("[INFO] Fallback window display successful")
+                except Exception as fallback_error:
+                    print(f"[ERROR] Fallback window display failed: {fallback_error}")
             
         except Exception as e:
             print(f"[ERROR] Error in show_translation: {e}")
             import traceback
             traceback.print_exc()
+    
+    def isValid(self):
+        """檢查視窗控制代碼是否有效"""
+        try:
+            # 簡單檢查視窗是否可用
+            return self.winId() != 0 and not self.isHidden()
+        except Exception:
+            return False
         
     def show_error(self, error):
         """顯示錯誤訊息"""
@@ -1874,9 +1921,22 @@ class TranslatorWindow(QWidget):
             self.show()
     
     def fade_out(self):
-        """淡出隱藏窗口"""
-        self.auto_hide_timer.stop()
-        self.hide()
+        """淡出隱藏窗口 - 安全版本"""
+        try:
+            if hasattr(self, 'auto_hide_timer') and self.auto_hide_timer.isActive():
+                self.auto_hide_timer.stop()
+            
+            # 安全隱藏視窗
+            if self.isVisible():
+                self.hide()
+                print("[INFO] Translation window hidden")
+        except Exception as e:
+            print(f"[WARNING] Error in fade_out: {e}")
+            # 強制隱藏
+            try:
+                self.hide()
+            except Exception:
+                pass
         
     def enterEvent(self, event):
         """鼠標進入時停止自動隱藏"""
@@ -2143,6 +2203,16 @@ class TranslatorApp(QObject):
     def setup_hotkeys(self):
         """Setup comprehensive QTranslate-inspired hotkeys with safe fallback"""
         self.hotkeys_enabled = False
+        
+        # Check if running as administrator
+        try:
+            import ctypes
+            is_admin = ctypes.windll.shell32.IsUserAnAdmin()
+            if not is_admin:
+                print("[WARNING] Not running as administrator - some hotkeys may fail")
+        except Exception:
+            print("[WARNING] Cannot check administrator privileges")
+        
         try:
             # Import keyboard library and test basic functionality
             import keyboard
@@ -2150,59 +2220,86 @@ class TranslatorApp(QObject):
             # Test if keyboard library works without causing access violations
             print("[INFO] Testing keyboard library compatibility...")
             
-            # Clear any existing hotkeys
-            keyboard.unhook_all()
+            # Clear any existing hotkeys safely
+            try:
+                keyboard.unhook_all()
+                time.sleep(0.1)  # Give time for cleanup
+            except Exception as e:
+                print(f"[WARNING] Failed to clear existing hotkeys: {e}")
             
-            # Register a test hotkey first
-            test_hotkey = keyboard.add_hotkey('ctrl+shift+f12', lambda: None, suppress=True)
+            # Test basic keyboard functionality with timeout
+            def test_hotkey_function():
+                print("[DEBUG] Test hotkey triggered")
             
-            # If we get here without error, keyboard library works
-            keyboard.remove_hotkey(test_hotkey)
-            
-            # Register QTranslate-inspired hotkeys
-            print("[INFO] Registering QTranslate hotkeys...")
-            
-            # Core translation hotkeys
-            keyboard.add_hotkey('ctrl+q', self.show_popup_translation, suppress=True)  # Popup window
-            keyboard.add_hotkey('ctrl+shift+q', self.web_search_selection, suppress=True)  # Web search
-            keyboard.add_hotkey('ctrl+shift+t', self.manual_translate, suppress=True)  # Manual translate
-            keyboard.add_hotkey('ctrl+e', self.listen_selected_text, suppress=True)  # Listen/TTS
-            keyboard.add_hotkey('ctrl+d', self.show_dictionary, suppress=True)  # Dictionary
-            keyboard.add_hotkey('ctrl+i', self.switch_languages, suppress=True)  # Switch languages
-            keyboard.add_hotkey('ctrl+h', self.show_translation_history, suppress=True)  # History
-            
-            # Auto-translate hotkey (Alt+C)
-            keyboard.add_hotkey('alt+c', self.auto_translate_selection, suppress=True)
-            
-            self.hotkeys_enabled = True
-            print("[SUCCESS] QTranslate hotkeys registered successfully!")
-            
-            # Show notification about available hotkeys
-            self.tray_icon.showMessage(
-                "快捷鍵已啟用", 
-                "QTranslate風格快捷鍵已啟用\nAlt+C: 自動翻譯\nCtrl+Q: 彈出翻譯\nCtrl+Shift+T: 手動翻譯", 
-                QSystemTrayIcon.Information, 
-                3000
-            )
-            
+            # Register a test hotkey first with safer parameters
+            try:
+                test_hotkey = keyboard.add_hotkey('ctrl+shift+f12', test_hotkey_function, suppress=False)
+                time.sleep(0.2)  # Wait for registration
+                
+                # If we get here without error, keyboard library works
+                keyboard.remove_hotkey(test_hotkey)
+                time.sleep(0.1)  # Give time for cleanup
+                
+                # Register QTranslate-inspired hotkeys with safer settings
+                print("[INFO] Registering QTranslate hotkeys...")
+                
+                # Core translation hotkeys - use suppress=False to avoid access violations
+                keyboard.add_hotkey('ctrl+q', self.show_popup_translation, suppress=False)
+                keyboard.add_hotkey('ctrl+shift+q', self.web_search_selection, suppress=False)
+                keyboard.add_hotkey('ctrl+shift+t', self.manual_translate, suppress=False)
+                keyboard.add_hotkey('ctrl+e', self.listen_selected_text, suppress=False)
+                keyboard.add_hotkey('ctrl+d', self.show_dictionary, suppress=False)
+                keyboard.add_hotkey('ctrl+i', self.switch_languages, suppress=False)
+                keyboard.add_hotkey('ctrl+h', self.show_translation_history, suppress=False)
+                
+                # Auto-translate hotkey (Ctrl+C) - monitor clipboard changes
+                keyboard.add_hotkey('ctrl+c', self.auto_translate_selection, suppress=False)
+                
+                self.hotkeys_enabled = True
+                print("[SUCCESS] QTranslate hotkeys registered successfully!")
+                
+                # Show notification about available hotkeys
+                try:
+                    self.tray_icon.showMessage(
+                        "快捷鍵已啟用", 
+                        "QTranslate風格快捷鍵已啟用\nCtrl+C: 自動翻譯\nCtrl+Q: 彈出翻譯\nCtrl+Shift+T: 手動翻譯", 
+                        QSystemTrayIcon.Information, 
+                        3000
+                    )
+                except Exception as msg_error:
+                    print(f"[WARNING] Failed to show hotkey notification: {msg_error}")
+                
+            except (OSError, PermissionError, Exception) as hotkey_error:
+                print(f"[ERROR] Hotkey registration failed: {hotkey_error}")
+                raise hotkey_error
+                
         except Exception as e:
             print(f"[ERROR] Keyboard library error: {e}")
             print("[INFO] Running in SAFE MODE without hotkeys")
             self.hotkeys_enabled = False
             
             # Show safe mode notification
-            self.tray_icon.showMessage(
-                "安全模式", 
-                "由於Windows權限限制，熱鍵已禁用。\n已啟用剪貼板監控功能：複製文字後會自動翻譯。\n也可使用系統托盤菜單訪問所有功能。", 
-                QSystemTrayIcon.Information, 
-                8000
-            )
+            try:
+                self.tray_icon.showMessage(
+                    "安全模式", 
+                    "由於Windows權限限制，熱鍵已禁用。\n已啟用剪貼板監控功能：複製文字後會自動翻譯。\n也可使用系統托盤菜單訪問所有功能。", 
+                    QSystemTrayIcon.Information, 
+                    8000
+                )
+            except Exception as msg_error:
+                print(f"[WARNING] Failed to show safe mode notification: {msg_error}")
             
             # Enhance system tray menu for safe mode
-            self.enhance_tray_menu_for_safe_mode()
+            try:
+                self.enhance_tray_menu_for_safe_mode()
+            except Exception as menu_error:
+                print(f"[WARNING] Failed to enhance tray menu: {menu_error}")
             
             # Start clipboard monitor as alternative to hotkeys
-            self.start_clipboard_monitor()
+            try:
+                self.start_clipboard_monitor()
+            except Exception as clipboard_error:
+                print(f"[WARNING] Failed to start clipboard monitor: {clipboard_error}")
     
     def start_clipboard_monitor(self):
         """Start clipboard monitoring for auto-translation when hotkeys fail"""
