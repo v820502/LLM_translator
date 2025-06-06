@@ -1,0 +1,351 @@
+{
+    "translation_service": {
+        "provider": "google",
+        "active_services": [
+            "google"
+        ],
+        "services_order": [
+            "google",
+            "deepl",
+            "microsoft",
+            "yandex",
+            "baidu",
+            "custom_llm"
+        ],
+        "disabled_services": [],
+        "google_api": {
+            "api_key": "",
+            "endpoint": "https://translation.googleapis.com/language/translate/v2",
+            "domain": "com"
+        },
+        "deepl": {
+            "enabled": false,
+            "api_key": "",
+            "endpoint": "https://api.deepl.com/v2/translate"
+        },
+        "microsoft": {
+            "enabled": false,
+            "api_key": "",
+            "region": "",
+            "endpoint": "https://api.cognitive.microsofttranslator.com"
+        },
+        "yandex": {
+            "enabled": false,
+            "api_key": "",
+            "endpoint": "https://translate.yandex.net/api/v1.5/tr.json"
+        },
+        "baidu": {
+            "enabled": false,
+            "app_id": "",
+            "secret_key": "",
+            "endpoint": "https://fanyi-api.baidu.com/api/trans/vip/translate"
+        },
+        "custom_llm": {
+            "enabled": false,
+            "api_url": "",
+            "api_key": "",
+            "system_prompt": "You are a professional translator. Translate the following text accurately while preserving the original meaning and context. Only provide the translation without any additional explanation."
+        }
+    },
+    "hotkeys": {
+        "enable_hotkeys": true,
+        "main_window": "ctrl+ctrl",
+        "popup_window": "ctrl+q",
+        "web_search": "ctrl+shift+q",
+        "listen_text": "ctrl+e",
+        "dictionary": "ctrl+d",
+        "history": "ctrl+h",
+        "clear_translation": "ctrl+n",
+        "virtual_keyboard": "ctrl+k",
+        "switch_languages": "ctrl+i",
+        "manual_translate": "ctrl+shift+t",
+        "ocr_translate": "ctrl+shift+o",
+        "speech_input": "ctrl+shift+s",
+        "replace_selection": "ctrl+shift+r",
+        "copy_translation": "ctrl+shift+c",
+        "convert_text_layout": "ctrl+shift+l",
+        "fullscreen": "f11",
+        "help": "f1",
+        "previous_translation": "alt+left",
+        "next_translation": "alt+right",
+        "copy_to_dictionary": "ctrl+up"
+    },
+    "mouse": {
+        "mode": 1,
+        "mode_on": true,
+        "enable_on_ctrl": false,
+        "switch_mode_on_tray_click": true,
+        "modes": {
+            "disabled": 0,
+            "icon_show": 1,
+            "instant_translate": 2,
+            "instant_translate_and_listen": 3
+        }
+    },
+    "ui": {
+        "theme": "Photoshop Dark",
+        "enable_window_style": true,
+        "window_opacity": 0.95,
+        "font_size": 14,
+        "window_width": 400,
+        "window_height": 300,
+        "animation_speed": 200,
+        "show_source_text": true,
+        "auto_copy": false,
+        "minimize_to_tray": true,
+        "transparency": 243,
+        "popup_timeout": 5,
+        "popup_auto_position": true,
+        "popup_auto_size": true,
+        "popup_auto_focus": false,
+        "popup_pin_when_dragging": true,
+        "popup_window_frame_thickness": 2,
+        "popup_icons": 30,
+        "color_back": "#f0f0f0",
+        "color_text": "#000000",
+        "color_frame": "#7a7a7a"
+    },
+    "speech": {
+        "tts_enabled": true,
+        "stt_enabled": true,
+        "voice_speed": 1.0,
+        "voice_language": "auto",
+        "enable_slower_listening": true,
+        "auto_listen_on_translate": false
+    },
+    "ocr": {
+        "enabled": true,
+        "api_key": "",
+        "language": "auto",
+        "save_image_path": "",
+        "confidence_threshold": 0.7
+    },
+    "dictionary": {
+        "show_services_pane": true,
+        "exact_search": true,
+        "active_services": [
+            "oxford",
+            "cambridge",
+            "wordreference"
+        ],
+        "disabled_dictionaries": [],
+        "services": {
+            "oxford": {
+                "enabled": true,
+                "url_template": "https://www.oxfordlearnersdictionaries.com/definition/english/{word}"
+            },
+            "cambridge": {
+                "enabled": true,
+                "url_template": "https://dictionary.cambridge.org/dictionary/english/{word}"
+            },
+            "wordreference": {
+                "enabled": true,
+                "url_template": "https://www.wordreference.com/definition/{word}"
+            },
+            "multitran": {
+                "enabled": false,
+                "url_template": "https://www.multitran.com/m.exe?l1=1&l2=2&s={word}"
+            }
+        }
+    },
+    "advanced": {
+        "enable_gui_translation": false,
+        "copy_action": 0,
+        "default_browser_id": "",
+        "remove_line_breaks": false,
+        "layout_indicator": 0,
+        "retry_attempts": 3,
+        "retry_delay": 1000,
+        "offline_mode": false,
+        "log_level": "info",
+        "auto_update": true,
+        "plugin_support": true,
+        "integration_modules": [
+            "clipboard",
+            "system_tray",
+            "hotkeys"
+        ]
+    },
+    "proxy": {
+        "type": 0,
+        "scheme": 0,
+        "host": "",
+        "port": 0,
+        "username": "",
+        "password": ""
+    },
+    "exceptions": {
+        "disabled": [
+            [
+                "",
+                "SysListView32"
+            ],
+            [
+                "",
+                "SysTreeView32"
+            ],
+            [
+                "",
+                "ListBox"
+            ],
+            [
+                "",
+                "ScrollBar"
+            ],
+            [
+                "",
+                "ComboBox"
+            ],
+            [
+                "",
+                "msctls_hotkey32"
+            ],
+            [
+                "",
+                "ConsoleWindowClass"
+            ],
+            [
+                "mstsc.exe",
+                ""
+            ]
+        ],
+        "enabled": [],
+        "disabled_mode": true
+    },
+    "general": {
+        "enable_history": true,
+        "clear_history_on_exit": false,
+        "auto_cleanup_of_translation": false,
+        "minimize_to_tray_on_close": true,
+        "minimize_to_tray_on_minimize": false,
+        "main_window_show_on_load": false,
+        "main_window_startup_action": 0,
+        "always_detect_language": false,
+        "use_smart_detection": true,
+        "show_services_pane": true,
+        "show_middle_pane": true,
+        "show_top_pane": true,
+        "expand_history_items": false,
+        "read_phonetically": false
+    },
+    "translation": {
+        "default_source": "auto",
+        "default_target": "zh-TW",
+        "preserve_format": true,
+        "auto_translate": false,
+        "cache_size": 1000,
+        "batch_size": 50,
+        "retry_failed": true,
+        "instant_translation": false,
+        "auto_detect_language": true,
+        "back_translation": false,
+        "spell_checking": true,
+        "clear_on_drag_drop": true
+    },
+    "translation_memory": {
+        "enabled": true,
+        "max_entries": 10000,
+        "auto_save": true,
+        "cleanup_threshold": 15000,
+        "similarity_threshold": 0.9
+    },
+    "language_detection": {
+        "enabled": true,
+        "confidence_threshold": 0.7,
+        "fallback_language": "en"
+    },
+    "multilingual": {
+        "enabled_languages": [
+            "zh-CN",
+            "zh-TW",
+            "en",
+            "ja",
+            "ko",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "ru",
+            "ar",
+            "hi",
+            "th",
+            "vi"
+        ],
+        "default_languages": [
+            "zh-TW",
+            "en",
+            "ja"
+        ],
+        "language_switching": true,
+        "content_management": true
+    },
+    "language_pairs": [
+        [
+            12,
+            17
+        ],
+        [
+            17,
+            12
+        ]
+    ],
+    "disabled_languages": [],
+    "auto_detection": {
+        "language_first": 12,
+        "language_second": 17,
+        "language_speech_recognition": 12
+    },
+    "api": {
+        "provider": "openai",
+        "api_key": "",
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.3,
+        "max_tokens": 1000
+    },
+    "qtranslate_features": {
+        "content_storage": true,
+        "language_switching_widget": true,
+        "multilingual_content_support": true,
+        "advanced_hotkeys": true,
+        "mouse_mode_switching": true,
+        "ocr_translation": true,
+        "speech_features": true,
+        "dictionary_integration": true,
+        "theming_system": true,
+        "exception_management": true,
+        "translation_modules": {
+            "google_translate": true,
+            "deepl": false,
+            "microsoft": false,
+            "yandex": false,
+            "baidu": false,
+            "custom_llm": true,
+            "translation_memory": true
+        },
+        "integration_api": {
+            "enabled": false,
+            "port": 8080,
+            "auth_required": false
+        }
+    },
+    "themes": {
+        "available": [
+            "Photoshop Dark",
+            "Holo Light",
+            "Metro",
+            "Blue",
+            "Flat Dark"
+        ],
+        "current": "Photoshop Dark"
+    },
+    "update": {
+        "check_for_updates": false,
+        "auto_update": false,
+        "update_channel": "stable"
+    },
+    "internet": {
+        "timeout": 10000,
+        "user_agent": "LLM-Translator/1.0"
+    }
+}

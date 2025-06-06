@@ -1,0 +1,26 @@
+Systémové klávesové zkratky (výchozí hodnoty):
+2x Ctrl => Zobrazit hlavní okno (s překladem textu, pokud byl nějaký vybrán)
+Ctrl+Q => Přeložit vybraný text a zobrazit ho ve vyskakovacím okně
+Ctrl+Shift+Q => Zobrazit vybraný text ve Slovníku
+Ctrl+E => Poslechnout si vybraný text
+
+Klávesové zkratky:
+Ctrl+Enter => Přeložit text v hlavním okně
+Ctrl+N => Vymazat současný překlad
+Ctrl+H => Zobrazit okno s historií překladů
+Ctrl+K => Zobrazit virtuální klávesnici
+Ctrl+Tab/Ctrl+Shift+Tab/Ctrl+1..9 => Přepnout se na další/předchozí/1.-9. překladačovou službu
+Shift+Esc => Změnit jazykový pár na autodetekci
+Ctrl+I => Obrátit směr překladu
+Ctrl+Space => Zobrazit rozbalovací nabídku s návrhy/automatickým dokončením
+F1 => Zobrazit nápovědu
+
+Existují dva režimy překladu pomocí výběru myší (jak je zapnout, viz níže):
+  1) Zobrazit ikonu (Vyberte text v nějakém programu a poblíž kurzoru se objeví ikona. Klikněte na ikonu a objeví se vyskakovací okno s překladem vybraného textu.);
+  2) Zobrazit překlad (Vyberte text v nějakém programu a okamžitě se objeví vyskakovací okno s překladem vybraného textu).
+
+Akce:
+  - Klepnutím levým tlačítkem myši na ikoně programu v oznamovací oblasti přepnete režimu výběru pomocí myši (viz výše);
+  - Klepnutím 2x levým tlačítkem myši na ikoně programu v oznamovací oblasti zobrazíte hlavní okno;
+  - Klepnutím 2x levým tlačítkem myši na hlavičce vyskakovacího okna otevřete hlavní okno se současným překladem;
+  - Klepnutím levým tlačítkem myši na názvu služby ve vyskakovacím okně změníte aktuální službu a přeložíte v ní text.

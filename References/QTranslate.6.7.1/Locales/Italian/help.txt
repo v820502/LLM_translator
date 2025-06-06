@@ -1,0 +1,32 @@
+﻿Tasti di scelta rapida a livello di sistema (valori di default):
+Due volte Ctrl => Mostra la finestra principale (con la traduzione del testo selezionato, se c'è)
+Ctrl+Q Traduce il testo selezionato e lo mostra nella finestra popup
+Ctrl+Alt+Q => Mostra la finestra dizionario
+Ctrl+E => Ascolta il testo selezionato
+
+Finestra principale dei tasti di scelta rapida:
+Ctrl+Invio => Traduce il testo
+Ctrl+N => Cancella la traduzione corrente
+Ctrl+D => Mostra il dizionario
+Ctrl+Alt+1..9 => Mostra il dizionario con il servizio di traduzione da 1 a 9 selezionato
+Ctrl+H => Visualizza la cronologia delle traduzioni
+Ctrl+K => Mostra la tastiera virtuale
+Ctrl+Tab/Ctrl+Shift+Tab/Ctrl+1..9 => Passa al servizio di traduzione successiva/precedente / da 1 a 9
+Shift+Esc => Ripristina la coppia di lingue rilevate automaticamente
+Ctrl+Shift+1..9 => Seleziona la coppia di lingue
+Ctrl+I => Scambia la direzione della traduzione
+Ctrl+Space => Mostra il menù suggerimento/autocompleta
+F1 => Mostra la guida
+Alt+Freccia Sinistra => Va alla traduzione precedente
+Alt+Freccia Destra => Va alla traduzione successiva
+Ctrl+Su => Copia la traduzione nella casella di testo
+
+Ci sono due modalità di traduzione mediante selezione del mouse:
+  1) Mostra l'icona (seleziona il testo in un programma - l'icona del programma apparirà vicino al cursore Clicca sull'icona - apparirà la finestra popup con la traduzione del testo selezionato).;
+  2) Mostra la traduzione (seleziona il testo in un programma - la finestra popup con la traduzione del testo selezionato apparirà immediatamente).
+
+Azioni:
+  - Il tasto sinistro sull'icona del programma nella barra di sistema attiva/disattiva la modalità di selezione del mouse (vedi sopra);
+  - Il doppio clic sull'icona del programma nella barra di sistema mostra la finestra principale;
+  - Il doppio clic sull'intestazione della finestra popup apre la finestra principale con la traduzione corrente;
+  - Il clic col tasto sinistro sul nome di un servizio nella finestra popup cambia il servizio attuale e ritraduce il testo.

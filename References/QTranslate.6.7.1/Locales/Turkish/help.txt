@@ -1,0 +1,32 @@
+﻿Sistem-genelinde kısayol tuşları (Varsayılan değerler):
+ÇİFT Ctrl => Ana pencerede göster (Seçili metni, herhangi bir Tercüme ile)
+Ctrl+Q => Seçili metni çevir ve açılan pencerede göster
+Ctrl+Shift+Q => Sözlük penceresini göster
+Ctrl+E => Seçili metni dinle
+
+Ana pencere klavye kısayolları:
+Ctrl+Enter => Metin Tercümesi
+Ctrl+N => Geçerli Tercümeyi temizleyin
+Ctrl+D => Söslüğü göster
+Ctrl+Alt+1..9 => 1..9 Arası tercüme servisiyle seçili sözlüğü göster 
+Ctrl+H => Tercüme geçmişi iletişim kutusunu göster
+Ctrl+K => Sanal klavyeyi göster
+Ctrl+Tab/Ctrl+Shift+Tab/Ctrl+1..9 => 1..9 arası Tercüme hizmetine geçiş yap, Sonraki/Önceki/
+Shift+Esc => Otomatik algılama için çift dili sıfırla
+Ctrl+Shift+1..9 => Çift dil seçimi
+Ctrl+I => Tercüme yönünü ters çevir
+Ctrl+Space => Öneri göster/Açılan menüyü otomatik tamamla
+F1 => Yardım Göster
+Alt+Left Arrow => Önceki tercümeye git
+Alt+Right Arrow => Sonraki tercümeye git
+Ctrl+Up => Tercümeyi metin giriş kutusuna kopyala
+
+Çevirinin  fare seçimine göre iki modu vardır (nasıl açılır aşağıya bakın):
+  1) Simge gösterme (Herhangi bir metni seçin, imlecin yanında açılır pencereden hemen program simgesi gözükecektir. Simgeye tıklayın ve açılan pencerede seçili metin çevirisi ile görüntülenir);
+  2) Tercüme gösterme (Herhangi bir metni seçin, açılan pencerede seçili metin Tercümesi ile hemen görüntülenir).
+
+Eylemler:
+  - Sistem tepsisindeki  program simgesine (Q) farenin sağ tuşuyla tıklayın ve fare seçim modunu açın yada kapatın (Bkz. yukarıda);
+  - Ana pencereyi görmek için sistem çubuğundaki program simgesine farenin sol tuşu ile çift tıklayın;
+  - Double click left mouse button on the popup window's header to open the main window with the current translation;
+  - Click left mouse button on the name of a service in the popup window to change the current service and re-translate a text.

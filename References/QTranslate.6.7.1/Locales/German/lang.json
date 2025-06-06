@@ -1,0 +1,341 @@
+﻿{
+  "Author": "Thomas Linke",
+  "LanguageName": "German",
+  "LanguageNativeName": "Deutsch",
+  "LanguageCode": "de",
+  "Strings": [
+    [171, "Löschen der aktuellen Übersetzung (Ctrl+N)"],
+    [172, "Übersetzen (Ctrl+Enter)"],
+    [173, "Wechseln der Sprache (Ctrl+I)"],
+    [174, "Audiowiedergabe des Textes"],
+    [175, "Go back (Alt+Left Arrow)"],
+    [184, "Go forward (Alt+Right Arrow)"],
+    [176, "Sprache wird nicht automatisch erkannt. Wählen Sie manuell aus."],
+    [177, "Übersetzungsdienst unterstützt nicht die Quellsprache."],
+    [178, "Über"],
+    [179, "Version "],
+    [180, "Der Updateserver nicht nicht erreichbar"],
+    [181, "Eine neue Version (%s) ist verfügbar"],
+    [182, "%s ist aktuell"],
+    [183, "Suche nach einem Update..."],
+    [185, "Update failed"],
+    [186, "Transkription: "],
+    [187, "Immer im Vordergrund"],
+    [188, "Tastatur"],
+    [189, "Kann keine Internetverbindung herstellen."],
+    [190, "Keine Daten zurückgegeben (Zeitüberschreibung beim senden von Daten)."],
+    [191, "Keine Daten zurückgegeben."],
+    [192, "Keine zu übersetzenden Daten."],
+    [193, "Übersetzungsdienst unterstützt nicht die angeforderte Funktion."],
+    [194, "Kann kein Audio wiedergeben."],
+    [195, "Übersetzungsdienst unterstützt keine Audiowiedergabe für diese Sprache oder der Text ist zu lang."],
+    [196, "Skript-Fehler (Übersetzungsdienst)."],
+    [197, "Unerwarteter Fehler."],
+    [198, "Übersetzungsdienst unterstützt nicht die Zielsprache."],
+    [199, "Kann Datei nicht finden: "],
+    [200, "Installing update..."],
+    [201, "Add to favorites"],
+    [202, "Remove from favorites"],
+    [203, "Vergewissern Sie sich, dass das Mikrofon mit dem Computer verbunden ist."],
+    [204, "Internetverbindung konnte nicht hergestellt werden"],
+    [205, "Spracheingabe aktivieren (%s)"],
+    [206, "Spracheingabe deaktivieren"]
+  ],
+  "Windows": [{
+    "Controls": [
+      [1004, "Übersetzen"]
+    ],
+    "Id": 1,
+    "Caption": "QTranslate"
+  }, {
+    "Controls": [
+      [10, [
+        [20, "Dictionary search for"],
+        [30, "Listen to selected text"],
+        [40, "Copy translation to clipboard"],
+        [50, "Replace selected text"]
+      ]]
+    ],
+    "Id": 6
+  }, {
+    "Controls": [],
+    "Strings": [
+      [10, "No results found for '%s'."]
+    ],
+    "Id": 5,
+    "Caption": "Wörterbuch"
+  }, {
+    "Controls": [
+      [1, "OK"],
+      [1160, "Speichern als..."],
+      [1067, "Löschen"]
+    ],
+    "Id": 3,
+    "Caption": "Verlauf"
+  }, {
+    "Controls": [
+      [1, "OK"],
+      [2, "Abbruch"],
+      [1049, "Übernehmen"]
+    ],
+    "Id": 2,
+    "Caption": "Einstellungen"
+  }, {
+    "Controls": [
+      [1045, "Mit Windows starten"],
+      [1070, "Sprache des Programms:"],
+      [1075, "Font name:"],
+      [1074, "Textgröße:"],
+      [1068, "Erste Sprache:"],
+      [1069, "Zweite Sprache:"],
+      [1071, "Speech input:"],
+      [1063, "Automatische Spracherkennung"],
+      [1046, "Allgemein"],
+      [1064, "Verlauf"],
+      [1122, "Aktiviere Verlauf"],
+      [1124, "Clear history on exit"],
+      [1123, "Expand items"]
+    ],
+    "Id": 10,
+    "Caption": "Grundlagen"
+  }, {
+    "Controls": [
+      [1049, "Verbindung"],
+      [1084, "Timeout in Sek.:"],
+      [1033, "Automatische Proxy-Erkennung"],
+      [1034, "Hostname / IP-Adresse"],
+      [1036, "Benutzername"],
+      [1037, "Passwort"],
+      [1048, "Proxy"],
+      [1035, "Port"],
+      [1135, [
+        [0, "Use system proxy settings"],
+        [1, "No proxy"],
+        [2, "Manual proxy configuration"],
+        [3, "Auto-detect proxy settings"]
+      ]]
+    ],
+    "Id": 11,
+    "Caption": "Internet"
+  }, {
+    "Controls": [
+      [1177, "Add dictionary..."],
+      [1180, "Remove dictionary"]
+    ],
+    "Id": 12,
+    "Caption": "Übersetzungsdienste"
+  }, {
+    "Controls": [
+      [1099, "Alle Aktivieren / Deaktivieren"]
+    ],
+    "Id": 13,
+    "Caption": "Sprachen"
+  }, {
+    "Controls": [
+      [1076, "Allgemein"],
+      [1123, "Aktiviere Fensterstil"],
+      [1169, "Theme:"],
+      [1158, "Aktiviere autom. Größe"],
+      [1160, "Enable auto position"],
+      [1159, "Activate when opened"],
+      [1161, "Pin when dragging"],
+      [1124, "Popup-Fenster"],
+      [1092, "Hintergrundfarbe:"],
+      [1091, "Textfarbe:"],
+      [1090, "Rahmenfarbe:"],
+      [1145, "Transparenz (0 - 90):"],
+      [1146, "Frame thickness:"],
+      [1147, "Auto-hide delay:"],
+      [1194, "seconds"],
+      [1137, "Icons:"],
+      [1138, "Show open dictionary icon"],
+      [1139, "Show listen to selected text icon"],
+      [1140, "Show copy text to clipboard icon"],
+      [1141, "Show replace selected text icon"]
+    ],
+    "Id": 14,
+    "Caption": "Erscheinungsbild"
+  }, {
+    "Controls": [
+      [1162, [
+        [0, "Enabled for these programs:"],
+        [1, "QTranslate ist Nicht aktiv in folgenden Programmen:"]
+      ]],
+      [1101, "Hinzufügen"],
+      [1103, "Ändern"],
+      [1102, "Löschen"],
+      [1113, "Intelligente Erkennung aktivieren"]
+    ],
+    "Id": 15,
+    "Caption": "Ausnahmen"
+  }, {
+    "Controls": [
+      [1118, "Aktivieren der Tastenkombinationen"],
+      [1165, [
+        [0, "Anzeige des Programms"],
+        [1, "Anzeige des Popup-Fensters"],
+        [2, "Wörterbuch anzeigen"],
+        [3, "Show history window"],
+        [4, "Show keyboard window"],
+        [5, "Audiowiedergabe des selektierten Textes"],
+        [6, "Kopieren der Übersetzung in Zwischenablage"],
+        [7, "Ersetzen des markierten Texts"],
+        [8, "Switch mouse mode"],
+        [9, "Translate clipboard content"],
+        [10, "Translate clipboard in main window"],
+        [11, "Translate clipboard in popup window"],
+        [12, "Dictionary from clipboard"],
+        [13, "Change keyboard layout and selected text"],
+        [14, "Listen to selected text translation"],
+        [15, "Text recognition"],
+        [16, "Speech input"]
+      ]]
+    ],
+    "Id": 16,
+    "Caption": "Tastenkombinationen"
+  }, {
+    "Controls": [
+      [1146, "Erweitert"],
+      [1151, "Default browser:"],
+      [1147, "Aktion kopieren:"],
+      [1149, "Tastaturlayout-Indikator:"],
+      [1157, "Bevorzugte Domain:"],
+      [1154, "GUI-Übersetzung aktivieren"],
+      [1159, "Enable listening to the same text at a slower speed"],
+      [1160, "Remove line breaks"],
+      [1186, "Mouse mode"],
+      [1155, "Enable mouse mode only when Ctrl is pressed"],
+      [1156, "Click on system tray icon switches mouse mode"],
+      [1158, "API keys"],
+      [1195, "OCR API key:"]
+    ],
+    "Id": 17,
+    "Caption": "Erweitert"
+  }, {
+    "Controls": [
+      [1188, "Automatically check for updates"],
+      [1190, "Check now"],
+      [1191, "Install"]
+    ],
+    "Id": 18,
+    "Caption": "Updates"
+  }],
+  "Menus": [{
+    "Items": [
+      [10, "Rechtschreibprüfung"],
+      [20, "Sofortübersetzung"],
+      [30, "Übersetzung umkehren"],
+      [40, "Erweitert"],
+      [50, "Umschrift"],
+      [60, "Inhalt löschen bei Drag && Drop"],
+      [61, "Auto-cleanup of translation"],
+      [62, "Save contents on exit"],
+      [65, "Show top pane"],
+      [70, "Anzeige mittlere Menü"],
+      [80, "Anzeige unteres Menü"],
+      [81, "Minimize to system tray on minimize"],
+      [82, "Minimize to system tray on close"],
+      [85, "On startup"],
+      [86, "Show window"],
+      [87, "Minimize to tray"],
+      [88, "Restore previous state"],
+      [90, "Wörterbuch"],
+      [100, "Verlauf"],
+      [110, "Tastatur"],
+      [120, "Einstellungen"],
+      [125, "Über"],
+      [130, "Hilfe"],
+      [140, "Ende"]
+    ],
+    "Id": 1
+  }, {
+    "Items": [
+      [10, "Zurück"],
+      [20, "Ausschneiden"],
+      [30, "Ausschneiden Alles"],
+      [40, "Kopieren"],
+      [50, "Kopieren Alles"],
+      [60, "Einfügen"],
+      [70, "Alles Markieren"],
+      [75, "Übersetzen"],
+      [80, "Suche Wörterbucheintrag für"],
+      [90, "Anzeigen"]
+    ],
+    "Id": 2
+  }, {
+    "Items": [
+      [10, "Öffnen"],
+      [15, "Copy text"],
+      [20, "Kopiere Übersetzung"],
+      [30, "Löschen"],
+      [40, "Anzeigen"]
+    ],
+    "Id": 3
+  }, {
+    "Items": [
+      [10, "Rücksetzen"],
+      [20, "Editieren"],
+      [30, "Always detect language"]
+    ],
+    "Id": 4
+  }, {
+    "Items": [
+      [5, "Text recognition"],
+      [10, "Wörterbuch"],
+      [20, "Verlauf"],
+      [30, "Tastatur"],
+      [36, "Aktivieren der Tastenkombinationen"],
+      [40, "Maus-Modus"],
+      [50, "Aktiviere"],
+      [60, "Anzeige des Icons"],
+      [70, "Anzeige der Übersetzung"],
+      [71, "Anzeige der Übersetzung und lesen"],
+      [80, "Einstellungen"],
+      [90, "Über"],
+      [100, "Ende"]
+    ],
+    "Id": 5
+  }, {
+    "Items": [
+      [10, "Alles Markieren"],
+      [20, "Kopieren"],
+      [30, "Druck..."],
+      [40, "Übersetzen"],
+      [50, "Suchen"],
+      [60, "Anzeigen"]
+    ],
+    "Id": 6
+  }, {
+    "Items": [
+      [10, "Show Full History"]
+    ],
+    "Id": 7
+  }, {
+    "Items": [
+      [10, "Show info"],
+      [20, "Remove dictionary"]
+    ],
+    "Id": 8
+  }, {
+    "Items": [
+      [10, "Clear history"],
+      [20, "Show services pane"],
+      [30, "Exact search"],
+      [40, "Options"]
+    ],
+    "Id": 9
+  }, {
+    "Items": [
+      [110, "OCR language"],
+      [120, "Translate"],
+      [130, "Copy image"],
+      [140, "Copy text"],
+      [150, "Save image"],
+      [160, "Edit image"],
+      [170, "Select all"],
+      [180, "Clear selection"],
+      [190, "Close"]
+    ],
+    "Id": 10
+  }]
+}

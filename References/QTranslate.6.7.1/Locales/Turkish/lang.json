@@ -1,0 +1,341 @@
+﻿{
+  "Author": "GNC | turkportable.blogspot",
+  "LanguageName": "Turkish",
+  "LanguageNativeName": "Türkçe",
+  "LanguageCode": "tr",
+  "Strings": [
+    [171, "Geçerli Tercümeyi Temizle (Ctrl+N)"],
+    [172, "Tercüme (Ctrl+Enter)"],
+    [173, "Tercüme Yönü Ters Çevrilsin (Ctrl+I)"],
+    [174, "Metni Dinleyin"],
+    [175, "Geri Git (Alt+Sol Ok)"],
+    [184, "İleri Git (Alt+Sağ Ok)"],
+    [176, "Dili Algılayamadı. Lütfen El ile Seçiniz."],
+    [177, "Servis, Kaynak Dili Desteklemiyor."],
+    [178, "Hakkında"],
+    [179, "Versiyon "],
+    [180, "Güncelleme Sunucusu Kullanılamıyor"],
+    [181, "Yeni Bir Güncelleme (%s) Mevcut"],
+    [182, "%s Şu An Güncel"],
+    [183, "Güncelleme Bakılıyor..."],
+    [185, "Güncelleme Hatalı"],
+    [186, "Latinceleştir: "],
+    [187, "Herzaman Üstte"],
+    [188, "Klavye"],
+    [189, "İnternet Bağlantısı Kurulamıyor."],
+    [190, "Döndürülen Veri Yok (Veri gönderme süresi aşıldı)."],
+    [191, "Döndürülen Veri Yok."],
+    [192, "Tercüme İçin Veri Yok."],
+    [193, "Servis, İstenen Özelliği Desteklemiyor."],
+    [194, "Ses Akışı Çalınamıyor."],
+    [195, "Servis Ses için Bu Dili Desteklemiyor ya da Metni Çok Uzun."],
+    [196, "Komut Dosyası Servis Hatası."],
+    [197, "Beklenmeyen Hata."],
+    [198, "Servis Hedef Dili Desteklemiyor."],
+    [199, "Dosya Bulunamıyor: "],
+    [200, "Installing update..."],
+    [201, "Favorilere Ekle"],
+    [202, "Favorilerden Kaldır"],
+    [203, "Mikrofonunuzun bilgisayarınıza takılı olduğundan emin olun."],
+    [204, "Internet'e Bağlanılamıyor"],
+    [205, "Ses girişini aç (%s)"],
+    [206, "Ses girişini kapat"]
+  ],
+  "Windows": [{
+    "Controls": [
+      [1004, "Tercüme Et"]
+    ],
+    "Id": 1,
+    "Caption": "Tercüme Et"
+  }, {
+    "Controls": [
+      [10, [
+        [20, "Sözlük Arama"],
+        [30, "Seçili Metni Dinle"],
+        [40, "Çeviriyi Panoya Kopyala"],
+        [50, "Seçili Metni Değiştir"]
+      ]]
+    ],
+    "Id": 6
+  }, {
+    "Controls": [],
+    "Strings": [
+      [10, "Hiçbir Sonuç Bulunamadı '%s'."]
+    ],
+    "Id": 5,
+    "Caption": "Sözlük"
+  }, {
+    "Controls": [
+      [1, "Tamam"],
+      [1160, "Farklı Kaydet..."],
+      [1067, "Temizle"]
+    ],
+    "Id": 3,
+    "Caption": "Geçmiş"
+  }, {
+    "Controls": [
+      [1, "Tamam"],
+      [2, "İptal"],
+      [1049, "Uygula"]
+    ],
+    "Id": 2,
+    "Caption": "Seçenekler"
+  }, {
+    "Controls": [
+      [1045, "Windows ile Başlat"],
+      [1070, "Arayüz Dili:"],
+      [1075, "Font Adı:"],
+      [1074, "Metin Boyu:"],
+      [1068, "ilk Dil:"],
+      [1069, "ikinci Dil:"],
+      [1071, "Speech input:"],
+      [1063, "Dilleri Otomatik Algıla"],
+      [1046, "Genel"],
+      [1064, "Geçmiş"],
+      [1122, "Geçmişi Etkinleştir"],
+      [1124, "Çıkışta Geçmişi Temizle"],
+      [1123, "Öğeleri Genişlet"]
+    ],
+    "Id": 10,
+    "Caption": "Temel Öğeler"
+  }, {
+    "Controls": [
+      [1049, "Bağlantı"],
+      [1084, "Zaman Aşımı, san:"],
+      [1033, "Otomatik Proxy Algılama"],
+      [1034, "Host"],
+      [1036, "Kullanıcı Adı"],
+      [1037, "Şifre"],
+      [1048, "Proxy"],
+      [1035, "Port"],
+      [1135, [
+        [0, "Bu Sistemin Proxy Ayarlarını Kullan"],
+        [1, " Proxy Yok"],
+        [2, "El ile Proxy Yapılandırması"],
+        [3, "Proxy Ayarları Otomatik Algılansın"]
+      ]]
+    ],
+    "Id": 11,
+    "Caption": "Internet"
+  }, {
+    "Controls": [
+      [1177, "Sözlük Ekle..."],
+      [1180, "Sözlüğü Kaldır"]
+    ],
+    "Id": 12,
+     "Caption": "Servisler"
+  }, {
+    "Controls": [
+      [1099, "Onayla / Tüm Seçimi Kaldır"]
+    ],
+    "Id": 13,
+    "Caption": "Diller"
+  }, {
+    "Controls": [
+      [1076, "Genel"],
+      [1123, "Pencere Stilini Etkinleştir"],
+      [1169, "Tema:"],
+      [1158, "Otomatik Boyutu Etkinleştir"],
+      [1160, "Otomatik Pozisyonu Etkinleştir"],
+      [1159, "Açıldığında Etkinleştir"],
+      [1161, "Pin when dragging"],
+      [1124, "Açılır Pencere"],
+      [1092, "Arkaplan Rengi:"],
+      [1091, "Metin Rengi:"],
+      [1090, "Çerçeve Rengi:"],
+      [1145, "Şeffaflık (0 - 90):"],
+      [1146, "Çerçeve Kalınlığı:"],
+      [1147, "Gecikmeyi Otomatik Gizle:"],
+      [1194, "Saniye"],
+      [1137, "Simgeler:"],
+      [1138, "Show open dictionary icon"],
+      [1139, "Show listen to selected text icon"],
+      [1140, "Show copy text to clipboard icon"],
+      [1141, "Show replace selected text icon"]
+    ],
+    "Id": 14,
+    "Caption": "Görünüm"
+  }, {
+    "Controls": [
+      [1162, [
+        [0, "Bu Programlar için Etkin:"],
+        [1, "Bu Programlar için Devre Dışı:"]
+      ]],
+      [1101, "Ekle"],
+      [1103, "Değiştir"],
+      [1102, "Sil"],
+      [1113, "Akıllı Algılamayı Etkinleştir"]
+    ],
+    "Id": 15,
+    "Caption": "İstisnalar"
+  }, {
+    "Controls": [
+      [1118, "Kısa Yolları Etkinleştir"],
+      [1165, [
+        [0, "Ana Pencereyi Göster"],
+        [1, "Açılır Pencereyi Göster"],
+        [2, "Sözlük Penceresini Göster"],
+        [3, "Geçmiş Penceresini Göster"],
+        [4, "Klavye Penceresini Göster"],
+        [5, "Seçilen Metni Dinle"],
+        [6, "Tercümeyi Panoya Kopyala"],
+        [7, "Seçilen Metni Değiştirin"],
+        [8, "Fare Moduna Geçiş Yap"],
+        [9, "Pano içeriğini Çevir"],
+        [10, "Panodakini Ana Pencerede Tercüme Et"],
+        [11, "Panodakini Açılan pencerede Tercüme Et"],
+        [12, "Panodan Sözlük"],
+        [13, "Klavye Düzenini ve Seçili Metni Değiştir"],
+        [14, "Seçili Metin Tercümesini Dinle"],
+        [15, "Metin Tanıma"],
+        [16, "Speech input"]
+      ]]
+    ],
+    "Id": 16,
+    "Caption": "Kısa Yollar"
+  }, {
+    "Controls": [
+      [1146, "Gelişmiş"],
+      [1151, "Varsayılan Tarayıcı:"],
+      [1147, "Kopyalama işlemi:"],
+      [1149, "Klavye Düzeni Göstergesi:"],
+      [1157, "Tercih edilen etki alanı:"],
+      [1154, "GUI Tercümesini Etkinleştir"],
+      [1159, "Enable listening to the same text at a slower speed"],
+      [1160, "Remove line breaks"],
+      [1186, "Fare Modu"],
+      [1155, "Ctrl Tuşuna Basıldığında Fare Modunu Etkinleştir"],
+      [1156, "Sistem Tepsi Simgesi Üzerine Tıklayınca Fare Moduna Geçer"],
+      [1158, "API keys"],
+      [1195, "OCR API key:"]
+    ],
+    "Id": 17,
+    "Caption": "Gelişmiş"
+  }, {
+    "Controls": [
+      [1188, "Güncellemeler Otomatik Kontrol Edilsin"],
+      [1190, "Şimdi Bak"],
+      [1191, "Yükle"]
+    ],
+    "Id": 18,
+    "Caption": "Güncellemeler"
+  }],
+"Menus": [{
+    "Items": [
+      [10, "Yazım Denetimi"],
+      [20, "Anında Çeviri"],
+      [30, "Çeviriye Geri Dön"],
+      [40, "Genişletilmiş"],
+      [50, "Fonetik Okuyun"],
+      [60, "Sürükle Bırak Girişini Temizle"],
+      [61, "Çeviri Otomatik Temizlensin"],
+      [62, "Çıkışta içerikleri Kaydet"],
+      [65, "Üst Bölmeyi Göster"],
+      [70, "Orta Bölmeyi Göster"],
+      [80, "Hizmetler Bölmesini Göster"],
+      [81, "Sistem Tepsisine Küçült"],
+      [82, "Kapata Basılınca Sistem Tepsisine Küçült"],
+      [85, "Başlangıçta"],
+      [86, "Pencere Göster"],
+      [87, "Küçült"],
+      [88, "Önceki Durumuna Geri Yükle"],
+      [90, "Sözlük"],
+      [100, "Geçmiş"],
+      [110, "Klavye"],
+      [120, "Seçenekler"],
+      [125, "Hakkında"],
+      [130, "Yardım"],
+      [140, "Çıkış"]
+    ],
+    "Id": 1
+  }, {
+    "Items": [
+      [10, "Geri Al"],
+      [20, "Kes"],
+      [30, "Tümünü Kes"],
+      [40, "Kopyala"],
+      [50, "Tümünü Kopyala"],
+      [60, "Yapıştır"],
+      [70, "Tümünü Yapıştır"],
+      [75, "Tercüme"],
+      [80, "Sözlük Arama "],
+      [90, "Dinle"]
+    ],
+    "Id": 2
+  }, {
+    "Items": [
+      [10, "Aç"],
+      [15, "Metni Kopyala"],
+      [20, "Tercümeyi Kopyala"],
+      [30, "Sil"],
+      [40, "Dinle"]
+    ],
+    "Id": 3
+  }, {
+    "Items": [
+      [10, "Sıfırla"],
+      [20, "Düzenle..."],
+      [30, "Dili Herzaman Algıla"]
+    ],
+    "Id": 4
+  }, {
+    "Items": [
+      [5, "Metin Tanıma"],
+      [10, "Sözlük"],
+      [20, "Geçmiş"],
+      [30, "Klavye"],
+      [36, "Kısa Yolları Etkinleştir"],
+      [40, "Mouse (Fare) Modu"],
+      [50, "Etkin"],
+      [60, "Simgeyi Göster"],
+      [70, "Tercümeyi Göster"],
+      [71, "Tercümeyi Göster ve Oku"],
+      [80, "Seçenekler"],
+      [90, "Hakkında"],
+      [100, "Çıkış"]
+    ],
+    "Id": 5
+  }, {
+    "Items": [
+      [10, "Tümünü Seç"],
+      [20, "Kopyala"],
+      [30, "Yazdır..."],
+      [40, "Tercüme Et"],
+      [50, "Ara"],
+      [60, "Dinle"]
+    ],
+    "Id": 6
+  }, {
+    "Items": [
+      [10, "Tüm Geçmişi Göster"]
+    ],
+    "Id": 7
+  }, {
+    "Items": [
+      [10, "Bilgi Göster"],
+      [20, "Sözlük Kaldır"]
+    ],
+    "Id": 8
+  }, {
+    "Items": [
+      [10, "Geçmişi Temizle"],
+      [20, "Hizmetler Bölmesini Göster"],
+      [30, "Tam Arama"],
+      [40, "Seçenekler"]
+    ],
+    "Id": 9
+  }, {
+    "Items": [
+      [110, "OCR Dili"],
+      [120, "Tercüme"],
+      [130, "Resmi Kopyala"],
+      [140, "Metni Kopyala"],
+      [150, "Resmi Kaydet"],
+      [160, "Resmi Düzenle"],
+      [170, "Tümünü Seç"],
+      [180, "Seçileni Temizle"],
+      [190, "Kapat"]
+    ],
+    "Id": 10
+  }]
+}

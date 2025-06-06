@@ -1,0 +1,28 @@
+﻿Splošne Vroče tipke (privzete vrednosti):
+Double Ctrl => Pokaži glavno okno (s prevodom izbranega besedila, če obstaja)
+Ctrl+Q => Prevedi izbrano besedilo in ga prikaži v pojavnem oknu
+Ctrl+Shift+Q => Prikaži okno slovarja 
+Ctrl+E => Poslušajte izbrano besedilo
+
+Glavno okno Vroče tipke:
+Ctrl+Enter => Prevedi besedilo
+Ctrl+N => Počisti trenutni prevod
+Ctrl+H => Prikaži zgodovino prevoda
+Ctrl+K => Prikaži  navidezno tipkovnico
+Ctrl+Tab/Ctrl+Shift+Tab/Ctrl+1..9 => Preklopi na naslednjo/prejšnjo/1..9-to storitev za prevajanje
+Shift+Esc => Ponastavi jezikovni par na samodejno zaznavanje
+Ctrl+I => Zamenjaj smer prevoda
+Ctrl+Preslednica => Prikaži meni Predlog/Samodokončaj
+F1 => Prikaži pomoč
+Alt+Leva puščica => Pojdi na prejšnji prevod
+Alt+Desna puščica => Pojdi na naslednji prevod
+  
+Obstajata dva načina izbora prevoda z miško:
+  1) Prikaži ikono (izberite besedilo v programu - ikona programa se bo pojavila v bližini kazalca. Kliknite na ikono - pojavilo se bo pojavno okno s prevodom izbranega besedila);
+  2) Prikaži prevod (izberite besedilo v programu - takoj se bo pojavilo pojavno okno s prevodom izbranega besedila).
+
+Ukrepi:
+   - Levi klik na ikono programa v programski vrstici vklopi/izklopi način izbire z miško (glej zgoraj);
+   - Dvojni klik na ikono programa v programski vrstici prikaže glavno okno;
+   - Dvojni klik na glavo pojavnega okna odpre glavno okno s trenutnim prevodom;
+   - Levi klik z miško na ime storitve v pojavnem oknu spremeni trenutno storitev in ponovno prevede besedilo.    
