@@ -1,4 +1,8 @@
 {
+    "auto_translate": true,
+    "source_language": "auto",
+    "target_language": "zh-TW",
+    "translation_service": "google",
     "translation_service": {
         "provider": "google",
         "active_services": [
@@ -232,7 +236,7 @@
         "default_source": "auto",
         "default_target": "zh-TW",
         "preserve_format": true,
-        "auto_translate": false,
+        "auto_translate": true,
         "cache_size": 1000,
         "batch_size": 50,
         "retry_failed": true,
